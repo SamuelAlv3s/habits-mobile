@@ -40,12 +40,13 @@ export function New() {
   async function handleCreateNewHabit() {
     try {
       if (!title.trim()) {
-        Alert.alert("Novo Hábito", "Preencha o título do hábito");
-        return;
+        return Alert.alert("Novo Hábito", "Preencha o título do hábito");
       }
       if (weekDays.length === 0) {
-        Alert.alert("Novo Hábito", "Selecione pelo menos um dia da semana");
-        return;
+        return Alert.alert(
+          "Novo Hábito",
+          "Selecione pelo menos um dia da semana"
+        );
       }
 
       const newHabit = {

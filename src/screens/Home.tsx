@@ -32,7 +32,7 @@ export function Home() {
       const response = await api.get("/summary");
       setSummary(response.data);
     } catch (error) {
-      console.error(error);
+      console.log(error);
       Alert.alert("Erro ao buscar dados");
     } finally {
       setLoading(false);
